@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject Spawnpoint;
-    public GameObject Enemyprefab;
+    public GameObject enemyPrefab;
+    public bool stopSpawning = false;
+    public float spawnTime;
+    public float spawnDelay;
 
-
-    private void Update()
+    private void Start()
     {
-        SpawnNewEnemy();
+        InvokeRepeating("SpawnEnemy", spawnTime, spawnDelay);
     }
 
-    void SpawnNewEnemy()
+    public void SpawnEnemy()
     {
-        int randomNumber = Mathf.RoundToInt(Random.Range(5f, Spawnpoint.layer - 1));
-        Instantiate(Enemyprefab, Spawnpoint.transform.position, Quaternion.identity);
-        
+        Instantiate(enemyPrefab, transform.position, transform.rotation);
+        if (stopSpawning)
+        {
+            CancelInvoke("SpawnEnemy");
+        }
     }
 }

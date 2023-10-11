@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int health;
+    public int maxHealth = 3;
+    public int currentHealth;
     public PlayerDoDamage damage;
+  
 
-    private void Update()
+    private void Start()
     {
-        if(health <= 2)
-        {
-            Destroy(gameObject);
-        }
+        currentHealth = maxHealth;
+        Debug.Log(currentHealth);
+    }
 
-        Debug.Log(health);
+    void Update()
+    {
+        if(currentHealth <= 0)
+        {
+          
+            Destroy(gameObject);
+           
+        }
     }
 
     public void TakeDamage(int damage)
     {
-        health-=(int)damage;
-        Debug.Log("Test");
+        currentHealth -=damage;
+       
     }
 }
