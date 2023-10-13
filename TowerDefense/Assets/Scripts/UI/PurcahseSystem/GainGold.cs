@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GainGold : MonoBehaviour
 {
-    int gold = 0;
+    public int gold = 0;
     public EnemyHealth enemyhealth;
+
 
     private void Update()
     {
