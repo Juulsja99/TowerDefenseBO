@@ -20,7 +20,9 @@ PRODUCT 5 DEBUG:
 
 
 PRODUCT 6 GAME DESIGN:
+
 ![Schermopname (58)](https://github.com/Juulsja99/TowerDefenseBO/assets/114576334/1a6da53e-9e61-4388-b4fc-48bc1638b7e5)
+
 dit is mijn one page. Het idee was om een simpele versie te bouwen van de classic Age of war. Ik heb voor dit type tower defense gekozen omdat ik dit als kind altijd speelde met veel plezier. De meer traditionele tower defence is niet helemaal mijn ding. 
 
 mijn game bevat de volgende machenics:
