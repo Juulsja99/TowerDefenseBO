@@ -32,12 +32,20 @@ public class PlayerMove : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        collision= true;
+        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Player"))
+        {
+            collision = true;
+            Debug.Log("Coll");
+        }
+           
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        collision= false;
+        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Player"))
+        {
+            collision = false;
+        }
     }
 }
 

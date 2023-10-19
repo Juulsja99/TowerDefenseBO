@@ -466,7 +466,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675050458
 GameObject:
@@ -1017,7 +1017,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422879511 stripped
 GameObject:
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea32c343b0ede804595634823e46787d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 3398005590489325924, guid: c30f8904f7ea8aa468d894220904e3df, type: 3}
+  TurretPrefab: {fileID: 7005188337228254136, guid: b9c96c1f556456c45acc66826bd79397, type: 3}
   TurretSpawnpoint: {fileID: 1114183750}
 --- !u!1 &1603300935
 GameObject:
@@ -2239,7 +2239,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2134371916286956997, guid: 7b9922e999c1ca6429b72327fe7d476c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134371916286956997, guid: 7b9922e999c1ca6429b72327fe7d476c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2297,6 +2297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower1
       objectReference: {fileID: 0}
+    - target: {fileID: 2134371916286957002, guid: 7b9922e999c1ca6429b72327fe7d476c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2134371917034312930, guid: 7b9922e999c1ca6429b72327fe7d476c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.48935232
@@ -2332,7 +2336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6196852037410604219, guid: bbd4cc1429acd8240b957c03ff4ca4c0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6196852037410604219, guid: bbd4cc1429acd8240b957c03ff4ca4c0, type: 3}
       propertyPath: m_LocalScale.x

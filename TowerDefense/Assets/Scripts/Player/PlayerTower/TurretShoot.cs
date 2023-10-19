@@ -6,23 +6,16 @@ public class TurretShoot : MonoBehaviour
 {
     public GameObject Bullet;
     public Transform BulletPosition;
-    private float Timer;
-    private GameObject player;
-
-    private void Update()
+    public float Timer;
+    public AudioSource Cannon;
+  
+    public  void Shoot()
     {
-        Timer += Time.deltaTime;
 
-        if(Timer > 3) 
-        {
-            Timer = 0;
-            Shoot();
-
-        }
-    }
-
-    void Shoot()
-    {
         Instantiate(Bullet, BulletPosition.position, Quaternion.identity);
+        Cannon.Play();
+
+        
+       
     }
 }
