@@ -31,13 +31,19 @@ public class EnemyMove : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col)
-    {
-        collision = true;
+    {  
+      if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Enemy"))
+        {
+                collision = true;
+      }      
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        collision = false;
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Enemy"))
+        {
+            collision = false;
+        }
     }
 }
 

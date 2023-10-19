@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   enemyhealth: {fileID: 7356398649826714229, guid: cb9524dd1d04e3d4bbe6c307cd324937, type: 3}
+  myEnemy: {fileID: 24542302161581086, guid: cb9524dd1d04e3d4bbe6c307cd324937, type: 3}
   attackCooldown: 3
 --- !u!61 &5445836100982006930
 BoxCollider2D:
