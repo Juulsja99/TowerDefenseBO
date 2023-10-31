@@ -58,6 +58,7 @@ je begint het spel met 5 goudstukken. hiermee kun je soldaten kopen. iedere keer
 
 
 PRODUCT 7 CLASS DIAGRAM:
+![Schermopname (63)](https://github.com/Juulsja99/TowerDefenseBO/assets/114576334/1b9b2874-7f2b-4b90-ae7c-12ccde051d26)
 
 PRODUCT 8 TEST VIDEO:
 
