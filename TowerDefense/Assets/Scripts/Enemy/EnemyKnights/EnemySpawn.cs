@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
@@ -16,10 +16,15 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, transform.position, transform.rotation);
-        if (stopSpawning)
+        for (var i = 0; i < enemyPrefab.Length; i++)
         {
-            CancelInvoke("SpawnEnemy");
+
+            Instantiate(enemyPrefab[i], transform.position, transform.rotation);
+            if (stopSpawning)
+            {
+                CancelInvoke("SpawnEnemy");
+            }
         }
+
     }
 }

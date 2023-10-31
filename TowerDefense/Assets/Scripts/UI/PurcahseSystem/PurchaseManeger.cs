@@ -10,6 +10,8 @@ public class PurchaseManeger : MonoBehaviour
     public Button buyDragon;
     public Button buyTurret;
     private GainGold gaingold;
+    public GameObject PurchasePanel;
+    private TowerHealth towerhealth;
 
     
     
@@ -21,32 +23,41 @@ public class PurchaseManeger : MonoBehaviour
         buyDragon.enabled = true;
 
         gaingold = GetComponent<GainGold>();
+        towerhealth = FindAnyObjectByType<TowerHealth>();
       
     }
 
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Player").Length >= 4 )
+        if (GameObject.FindGameObjectsWithTag("Player").Length >= 4)
         {
           buyKnight.enabled = false;
           buyDragon.enabled = false;
 
         }
-
-        if (GameObject.FindGameObjectsWithTag("Player").Length <= 4)
+        else
         {
             buyKnight.enabled = true;
             buyDragon.enabled = true;
         }
+
+        
 
         if (GameObject.FindGameObjectsWithTag("Turret").Length >= 1)
         {
             buyTurret.enabled = false;
         }
 
-
-
-
+       if(towerhealth.currentHealth <= 0)
+        {
+            PurchasePanel.SetActive(false);
+        }
+        else
+        {
+            PurchasePanel.SetActive(true);
+        }
 
     }
+
+
 }

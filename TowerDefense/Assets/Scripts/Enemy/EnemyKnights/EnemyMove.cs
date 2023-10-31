@@ -6,12 +6,15 @@ public class EnemyMove : MonoBehaviour
 {
     private bool collision = false;
     public float speed = -2f;
-
+    public Animator walkAni;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject tower = GameObject.FindGameObjectWithTag("Tower2");
+        Physics2D.IgnoreCollision(tower.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class EnemyMove : MonoBehaviour
 
     public void Move()
     {
+        walkAni.SetFloat("Speed", 2);
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
@@ -34,7 +38,8 @@ public class EnemyMove : MonoBehaviour
     {  
       if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Enemy"))
         {
-                collision = true;
+            walkAni.SetFloat("Speed", 1);
+            collision = true;
       }      
     }
 
@@ -42,6 +47,7 @@ public class EnemyMove : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Enemy"))
         {
+          
             collision = false;
         }
     }
