@@ -16,6 +16,11 @@ PRODUCT 3 BUILD:
 
 PRODUCT 4 ANIMATIONS:
 
+
+https://github.com/Juulsja99/TowerDefenseBO/assets/114576334/3a68f933-df7d-41ee-9eb8-aca08333c093
+
+
+
 PRODUCT 5 DEBUG:
 Juiste script kon niet gevonden worden
 ![Schermopname (59)](https://github.com/Juulsja99/TowerDefenseBO/assets/114576334/3a2c733a-c1f1-4381-9fab-36be471c3ef7)
