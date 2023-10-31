@@ -8,6 +8,8 @@ TagManager:
   - PlayerKnight
   - PlayerDragon
   - Turret
+  - Tower
+  - Tower2
   layers:
   - Default
   - TransparentFX

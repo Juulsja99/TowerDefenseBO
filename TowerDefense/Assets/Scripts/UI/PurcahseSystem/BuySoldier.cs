@@ -7,21 +7,26 @@ public class BuySoldier : MonoBehaviour
 {
     public GameObject soldierPrefab;
     public GameObject Spawnpoint;
-
-    private PurchaseManeger purchasemanager;
+    [SerializeField] private GainGold gainGold;
+    [SerializeField] private int cost = 2;
 
 
     private void Start()
     {
-        purchasemanager= GetComponent<PurchaseManeger>();
-    }
+        gainGold = FindAnyObjectByType<GainGold>();
 
+    }
 
     public void PurchaseSoldier()
     {
-        Instantiate(soldierPrefab, Spawnpoint.transform.position, Quaternion.identity);
+        if(gainGold.gold >= cost)
+        {
+            gainGold.SpendGold(cost);
+            Instantiate(soldierPrefab, Spawnpoint.transform.position, Quaternion.identity);
 
-       
+        }
+
+
     }
 
    

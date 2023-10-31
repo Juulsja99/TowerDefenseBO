@@ -6,15 +6,24 @@ public class PlayerDoDamage : MonoBehaviour
 {
     public int damage = 1;
     public EnemyHealth enemyhealth;
-    public GameObject myEnemy;
+    public TowerHealth towerhealth;
     public float attackCooldown;
     float lastAttackTime;
-
+    public Animator fight;
+   
 
     private void Start()
     {
-        enemyhealth = myEnemy.GetComponent<EnemyHealth>();
+        enemyhealth= FindAnyObjectByType<EnemyHealth>();
+        towerhealth = FindAnyObjectByType<TowerHealth>();
     }
+
+    private void Update()
+    {
+        enemyhealth = FindAnyObjectByType<EnemyHealth>();
+    }
+
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -25,12 +34,22 @@ public class PlayerDoDamage : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Enemy"))
         {
+           
+            fight.SetBool("IsAttacking", true);
             enemyhealth.TakeDamage(damage);
             Debug.Log("damagetaken");
             
             
         }
 
-        lastAttackTime= Time.time;
+        if (collision.gameObject.CompareTag("Tower2"))
+        {
+            fight.SetBool("IsAttacking", true);
+            towerhealth.TakeDamage(damage);
+        }
+
+            lastAttackTime = Time.time;
     }
+
+   
 }
