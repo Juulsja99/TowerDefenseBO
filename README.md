@@ -12,7 +12,7 @@ PRODUCT 2 MAP STRUCTUUR:
 link naar root: https://github.com/Juulsja99/TowerDefenseBO/tree/main/TowerDefense
 
 PRODUCT 3 BUILD:
-
+https://github.com/Juulsja99/TowerDefenseBO/releases
 
 PRODUCT 4 ANIMATIONS:
 
